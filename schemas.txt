@@ -1,0 +1,48 @@
+### listing
+
+id: INT
+realtor_id: INT (FOREIGH_KEY)
+title: STR
+address: STR
+city: STR
+state: STR
+zip_code: STR
+description: TEXT
+price: INT
+bedrooms: INT
+bathrooms: INT
+square_feet: INT
+lot_size: FLOAT
+is_published: BOOLEAN [true]
+garage: INT [0]
+listing_data: DATE
+image_main: STR
+image_1: STR
+image_2: STR
+image_3: STR
+image_4: STR
+image_5: STR
+image_6: STR
+
+
+
+### realtor
+id: INT
+name: STR
+photo: STR
+description: STR
+email: STR
+phone: STR
+hire_data: DATE
+is_mvp: BOOLEAN [false]
+
+
+### contact
+id: INT
+user_id: INT (FOREIGH_KEY)
+listing_id: INT (FOREIGH_KEY)
+name: STR
+email: STR
+phone: STR
+message: text
+contace_date: DATE
