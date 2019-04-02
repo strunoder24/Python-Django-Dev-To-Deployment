@@ -1,5 +1,6 @@
 from django.db import models
 from realtors.models import Realtor
+from datetime import datetime
 
 
 class Listing(models.Model):
@@ -17,7 +18,7 @@ class Listing(models.Model):
     lot_size = models.DecimalField(max_digits=5, decimal_places=1)
     is_published = models.BooleanField(default=True)
     garage = models.PositiveIntegerField(default=0)
-    list_date = models.DateField(auto_now_add=True, blank=True)
+    list_date = models.DateField(default=datetime.now(), blank=True)
     photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/')
     photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
