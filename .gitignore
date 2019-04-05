@@ -3,6 +3,7 @@
 /.idea/
 /env/
 /static
+*.DS_Store
 /mediafiles
 
 ### Django ###

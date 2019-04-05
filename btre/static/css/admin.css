@@ -1,0 +1,64 @@
+#header {
+    height: 50px;
+    background: #10284e;
+    color: #fff;
+}
+
+
+#branding h1 {
+    color: #fff ;
+}
+
+
+div.breadcrumbs {
+    background: #30caa0;
+    color: #10284e;
+}
+
+
+div.breadcrumbs a {
+    color: #333;
+}
+
+
+a:link,
+a:visited {
+    color: #10284e;
+}
+
+
+.module h2, .module caption, .inline-group h2 {
+    background: #30caa0;
+}
+
+
+.selector-chosen h2 {
+    background: #30caa0 !important;
+}
+
+
+input[type=submit] {
+    transition: background .2s;
+}
+
+
+.submit-row input[type=submit] {
+    color: #fff;
+    background: #10284e;
+}
+
+
+.submit-row input[type=submit]:hover {
+    background: #131b41;
+}
+
+
+.submit-row input[name='_save'] {
+    background: #30caa0;
+}
+
+
+.submit-row input[name='_save']:hover {
+    background: #208868;
+}
+
