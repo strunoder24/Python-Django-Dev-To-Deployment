@@ -53,12 +53,12 @@ input[type=submit] {
 }
 
 
-.submit-row input[name='_save'] {
-    background: #30caa0;
+input[name='_save'] {
+    background: #30caa0 !important;
 }
 
 
-.submit-row input[name='_save']:hover {
-    background: #208868;
+input[name='_save']:hover {
+    background: #208868 !important;
 }
 
