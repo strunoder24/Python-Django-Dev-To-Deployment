@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from listings.models import Listing
+from realtors.models import Realtor
 
 
 def index(request):
@@ -13,4 +14,12 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'pages/about.html')
+    realtors = Realtor.objects.order_by('-hire_date')
+    sailor_of_month = Realtor.objects.get(is_mvp=True)
+
+    context = {
+        'realtors': realtors,
+        'best': sailor_of_month
+    }
+
+    return render(request, 'pages/about.html', context)
