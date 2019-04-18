@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 from .models import Listing
+from realtors.models import Realtor
 
 
 def index(request):
@@ -15,13 +16,19 @@ def index(request):
         'listings': paged_listings
     }
 
-    print(listings)
-
     return render(request, 'listings/listings.html', context)
 
 
 def listing(request, listing_id):
-    return render(request, 'listings/listing.html')
+    listing_by_id = get_object_or_404(Listing, pk=listing_id)
+    realtor = Realtor.objects.get(id=listing_by_id.realtor.id)
+
+    context = {
+        'listing': listing_by_id,
+        'realtor': realtor
+    }
+
+    return render(request, 'listings/listing.html', context)
 
 
 def search(request):
