@@ -21,11 +21,9 @@ def index(request):
 
 def listing(request, listing_id):
     listing_by_id = get_object_or_404(Listing, pk=listing_id)
-    realtor = Realtor.objects.get(id=listing_by_id.realtor.id)
 
     context = {
         'listing': listing_by_id,
-        'realtor': realtor
     }
 
     return render(request, 'listings/listing.html', context)

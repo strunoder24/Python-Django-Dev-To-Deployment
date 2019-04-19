@@ -125,7 +125,7 @@
                 </li>
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-bed"></i> Realtor:
-                  <span class="float-right">{{ realtor.name }}
+                  <span class="float-right">{{ listing.realtor.name }}
                   </span>
                 </li>
               </ul>
@@ -139,10 +139,10 @@
         </div>
         <div class="col-md-3">
           <div class="card mb-3">
-            <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Realtor photo">
+            <img class="card-img-top" src="{{ listing.realtor.photo.url }}" alt="Realtor photo">
             <div class="card-body">
               <h5 class="card-title">Property Realtor</h5>
-              <h6 class="text-secondary">{{ realtor.name }}</h6>
+              <h6 class="text-secondary">{{ lising.realtor.name }}</h6>
             </div>
           </div>
           <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
