@@ -7,6 +7,7 @@ class Contact(models.Model):
     listing_id = models.IntegerField()
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=100)
+    realtor_email = models.CharField(max_length=100, blank=True)
     phone = models.CharField(max_length=100)
     message = models.TextField(blank=True)
     contact_date = models.DateTimeField(default=datetime.now(), blank=True)
