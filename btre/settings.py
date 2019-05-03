@@ -93,17 +93,6 @@ if DEBUG:
             'PORT': '5432',
         },
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'btre_prod',
-            'USER': 'superadmin',
-            'PASSWORD': '24994547',
-            'HOST': 'postgres',
-            'PORT': '5432',
-        },
-    }
 
 
 # Password validation
@@ -164,3 +153,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'strunoder24@gmail.com'
 EMAIL_HOST_PASSWORD = '24994547omega*qwe'
 EMAIL_USE_TLS = True
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
